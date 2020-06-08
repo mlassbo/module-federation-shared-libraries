@@ -18,3 +18,8 @@ The MFEs should load real fast without significant overhead in load time or memo
 - The MFE bundle is split into several chunks to minimize the size of the entrypoint and to make use of the browser cache.
 -  The chunks are loaded lazily by the MFE entrypoint (so that the host should not have to reference the MFE chunks, only the entrypoint)
 - If several MFEs use the same library, e.g. react/angular etc, the library should only be fetched once to minimize load time and memory consumption.
+
+# Issues with the example code
+- The host references two MFEs but somehow one of them is loaded twice and the other one not at all resulting in only one of them being displayed.
+- The host has to reference both main.js and remoteEntry.js for each MFE
+- The MFEs has to be initialized with an async import(realentrypoint) (this one is perhaps not a big issue..)
