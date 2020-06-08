@@ -3,11 +3,14 @@ This purpose of this repo is to discuss the possibility of using Webpack 5 Modul
 
 The, very basic, example code consists of one host and two MFEs.
 
+## Run the example
+npm run start in mfe1, mfe2 and host respectively
+
 ## Host
 The host can be seen to represent a brownfield(-ish) monolithic SPA that has begun to be refactored into seperate code bases using a Microfrontend architecture. The host references two Microfrontend (MFE) components MFE1 and MFE2.
 
 ## MFE1 and MFE2
-These are the Microfrontends promising to put an end to the monolithic SPA era. In a more realistic example they would be built on some framework and perhaps registered as custom elements in shadow dom. In the absence of frameworks and as an example of sharing libraries they both reference lodash.
+These are the Microfrontends promising to put an end to the monolithic SPA era. In a more realistic example they would be built on some framework and perhaps registered as shadow dom custom elements. In the absence of frameworks and as an example of sharing libraries they both reference lodash.
 
 # Goals
 The MFEs should load real fast without significant overhead in load time or memory footprint compared to a classic monolithic SPA.
